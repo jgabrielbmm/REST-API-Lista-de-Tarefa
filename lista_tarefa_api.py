@@ -31,7 +31,7 @@ def visualisar_uma_tarefa(id):
 def deletar_tarefa(id):
     if request.method == 'DELETE':
         lista_de_tarefa.pop(id)
-        mensagem = f'A tarefa de {id} foi deletada'
+        mensagem = f'A tarefa de id {id} foi deletada'
         for i in range(0, len(lista_de_tarefa)):
             lista_de_tarefa[i]["id"] = i
         return jsonify({'status': 'sucesso', 'messagem': mensagem})
